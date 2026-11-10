@@ -4,18 +4,21 @@ Personal [Loon](https://nsloon.app) configuration for iOS, version-controlled so
 
 ## 在 Loon 里填这个地址
 
-配置 → 右上角 `+` → **从 URL 下载**：
+**推荐这条**——实时透传，没有缓存：
+
+```
+https://ghfast.top/https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
+```
+
+直连 raw（时通时不通，可用但看运气）：
 
 ```
 https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
 ```
 
-备用镜像（raw 偶尔抽风时用）：
+**不要用 jsdelivr 那个镜像。** 它按分支缓存约 12 小时，改完配置你半天看不到新内容，会以为没生效。
 
-```
-https://cdn.jsdelivr.net/gh/kosocn/loon-config@main/loon.conf
-https://ghfast.top/https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
-```
+换完内容后，Loon 里要进「配置」下拉刷新才会重新拉取。
 
 ## 结构
 
