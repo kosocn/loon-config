@@ -4,19 +4,25 @@ Personal [Loon](https://nsloon.app) configuration for iOS, version-controlled so
 
 ## 在 Loon 里填这个地址
 
-**推荐这条**——实时透传，没有缓存：
+**用这条**（实测无缓存，每次拉都是最新）：
 
 ```
-https://ghfast.top/https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
+https://ghproxy.net/https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
 ```
 
-直连 raw（时通时不通，可用但看运气）：
+备选，一样准确（固定到某个 commit，永不缓存，但改了要换 sha）：
+
+```
+https://cdn.jsdelivr.net/gh/kosocn/loon-config@<commit-sha>/loon.conf
+```
+
+直连 raw（时通时不通）：
 
 ```
 https://raw.githubusercontent.com/kosocn/loon-config/main/loon.conf
 ```
 
-**不要用 jsdelivr 那个镜像。** 它按分支缓存约 12 小时，改完配置你半天看不到新内容，会以为没生效。
+**不要用 ghfast.top 和 jsdelivr 的 `@main`。** 两者都有 CDN 缓存：ghfast 实测会返回上一版内容，jsdelivr 的 `@分支` 缓存约 12 小时。改完配置你半天看到旧内容，会以为改错了。
 
 换完内容后，Loon 里要进「配置」下拉刷新才会重新拉取。
 
